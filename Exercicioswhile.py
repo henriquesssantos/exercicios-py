@@ -119,7 +119,7 @@ print(f'Quantidade total de grãos de trigo: {total_grãos}')'''
 
 '''Construa um algoritmo que leia uma quantidade indeterminada de números
 inteiros positivos e identifique qual foi o maior número digitado. O final da
-série de números digitada deve ser indicado pela entrada de –1.'''
+série de números digitada deve ser indicado pela entrada de –1.
 
 maior = 0
 i = 0
@@ -129,4 +129,4 @@ while i != -1:
     if i > maior:
         maior = i
     
-print(f'O maior número digitado foi: {maior}')
+print(f'O maior número digitado foi: {maior}')'''

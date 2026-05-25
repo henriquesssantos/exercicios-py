@@ -68,11 +68,147 @@ for i in range(1,51):
 
 #EXERCICIO 3
 
-'''Liste os números de 1 até 500.'''
+'''Liste os números de 1 até 500.
 
 for i in range(1, 501):
     print(f'{i}')
     i += 1
+'''
+#EXERCICIO 4
+
+'''Foi feita uma pesquisa entre os habitantes de uma região e coletados os
+dados de altura e sexo (0=masc, 1=fem) das pessoas. Faça um programa
+que leia 50 dados diferentes e informe:
+a. a maior e a menor altura encontradas;
+b. a média de altura das mulheres;
+c. a média de altura da população;
+d. o percentual de homens na população.
+
+altura =0
+sexo = None
+
+contPessoas=0
+
+maiorAltura =0
+menorAltura =0
+
+somaAltFeminino = 0
+contFeminino =0
+mediaFeminino =0
+mediaPessoas =0
+
+somaAltHomens =0
+contHomens =0
+percentualHomens =0
+
+for i in range(1,51):
+    altura = float(input('digite sua altura: '))
+
+    if i == 1:
+        maiorAltura = altura
+        menorAltura = altura
+    if altura > maiorAltura:
+        maiorAltura = altura
+    elif altura < menorAltura:
+        menorAltura = altura
+
+    sexo = int(input('Digite seu sexo(0 = masculino / 1 = feminino): '))
+
+    if sexo == 1:
+        somaAltFeminino = somaAltFeminino + altura
+        contFeminino += 1
+
+    elif sexo == 0:
+        somaAltHomens = somaAltHomens + altura
+        contHomens += 1
+         
+    else:
+        continue
 
 
+mediaFeminino = somaAltFeminino / contFeminino
+mediaPessoas = (somaAltFeminino + somaAltHomens) / (contFeminino + contHomens)
+percentualHomens = contHomens * 100 / (contHomens + contFeminino)
 
+print(maiorAltura)
+print(menorAltura)
+print(mediaFeminino)
+print(mediaPessoas)        
+'''
+
+#EXERCICIO 5    
+
+'''Criar um algoritmo que leia os limites inferior e superior de um intervalo e
+imprima todos os números pares no intervalo aberto e seu somatório.
+Suponha que os números digitados são um intervalo crescente.
+Exemplo:
+- Limite inferior: 3
+- Limite superior: 12
+- Saída: 4 6 8 10
+- Soma: 28
+
+limInf = int(input("Informe o limite inferior do intervalo: "))
+limSup = int(input("Informe o limite superior do intervalo: "))
+saida = str()
+soma = 0
+
+for i in range(limInf, limSup):
+    if i % 2 == 0:
+        soma += i
+        saida = saida + " " + str(i)
+   
+   
+
+print(f"Limite inferior: {limInf}")
+print(f"Limite superior: {limSup}")
+print(f"Saída:{saida}")
+print(f"Soma: {soma}")
+
+print("FIM!")''' 
+
+#EXERCICIO 6
+
+'''6. Faça um algoritmo que leia tantos números quanto o usuário desejar e
+imprima a soma deles.
+
+soma = 0
+controle = 1
+
+while controle == 1:
+    controle = int(input('Deseja continuar? (digite 1 se sim)'))
+
+    if controle == 1:
+        numero = int(input(Informe um numero: ))
+        soma = soma + numero
+    else:
+        controle = 0
+
+print(soma)'''
+
+#EXERCICIO 7
+
+'''Faça um algoritmo que permita ao usuário informar a idade de quantas
+pessoas ele desejar. Após isso o algoritmo deve informar a soma das
+pessoas maiores de idade e a média de idade das pessoas maiores de idade
+informadas'''
+
+idade = 0
+somaIdade = 0
+mediaIdade = 0
+controle = 1
+totalPessoas = 1
+
+while controle == 1:
+    controle = int(input('deseja continuar? (digite 1 para sim): '))
+    if controle == 1:
+        idade = int(input('informe a idade:'))
+        if idade >= 18:
+            somaIdade = somaIdade + idade
+            totalPessoas += 1
+        else:
+            continue
+    
+
+mediaIdade = somaIdade / totalPessoas
+
+print(f'com o total de pessoas sendo {totalPessoas}, a media das idades foi de {mediaIdade}')
